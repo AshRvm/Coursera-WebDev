@@ -4,14 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
+    <style>
+        p{
+            color: rgb(42, 165, 93);
+            font-size: 20px;
+            width: auto;
+        }
+        h1{
+            color: crimson;
+        }
+        #section3{
+            text-align: center;
+            color: turquoise;
+            font-size: 20px;
+        }
+        .class_name{
+            text-align: center;
+            color: teal;
+            font-size: 20px;
+        }
+        
+/*Multiple selectors, can be of different types as well*/
+        #h1, #ul{
+            text-align:initial;
+            color: purple;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
 <h1 id = "top">Yahallo</h1>
 <h1>Yahallo once more</h1>
 <section id = "kusogakick">
-    <h1>Heading for section1 ig</h1>
+    <h1 id="h1">Heading for section1 ig</h1>
     Tis be an unordered list:
-    <ul>
+    <ul id="ul">
         <li> Ichi</li>
         <li> Ni</li>
         <li> San</li>
@@ -22,7 +49,7 @@
         <li> Go</li>
         <li> Ryouku</li>
     </ol>
-    <p>
+    <p class="class_name">
         Tis gonna be some blabberish. Don't mind me
         <br>
         Tis gonna be some blabberish. Don't mind me
@@ -62,7 +89,7 @@
     Greater than ... &gt;
     <br>
     &OpenCurlyQuote; Quotes &CloseCurlyQuote;
-    <div>What's gonna happen here ?</div>
+    <div><span>What's gonna happen here ?</span></div>
     <div>Guess I won't know until I try !</div>
 </section>
 <section id = "section3">
@@ -71,6 +98,8 @@
     <a href = "https://www.youtube.com/watch?v=3UujTImfKIY" target = "anything works here I guess (tho _blank is recommended /shrug)" title = "YoutubeLink">
         <div>HANAFUBUKI DESU</div>
     </a>
+    <img src="hanafubuki.jpg" alt="amazing song" width = "1000" height="600">
+    <br>
     
     Now these are section references:
     <br>
