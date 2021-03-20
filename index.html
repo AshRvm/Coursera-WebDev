@@ -35,6 +35,26 @@
             color:red;
             background-color: midnightblue;
         }
+/*Combination of selectors : */
+        p.class_name{
+            /* For all p with atribute class = class_name*/
+            color: black;
+        }
+        article > p{
+            /* For all p, which are children of article*/
+            /* .class_name > selector also works*/
+            color : black;
+        }
+        article p{
+            /* For all p, which are descendents of article*/
+            color : black;
+        }
+        section article{
+            color : green;
+        }
+        div > article{
+            color : blue;
+        }
     </style>
 </head>
 <body>
@@ -115,5 +135,15 @@
     <a href = "#section3">unga bunga</a>
 </section>
 <a href = "#top">back to top</a>
+<section>
+    <!-- Checking priority order between descendent and child selection combinations-->
+    <div>
+        <article>
+            Blue : child higher priority 
+            <br>
+            Green : descendent higher priority
+        </article>
+    </div>
+</section>
 </body>
 </html>
