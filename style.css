@@ -1,0 +1,103 @@
+/* comments in css */
+/* caniuse.com for....well....what the title says */
+
+*{
+    box-sizing: content-box;
+    /*UNIVERSAL SELECTOR : Applies this propery to all elements, not by inheritance*/
+}
+
+p{
+    color: rgb(42, 165, 93);
+    font-size: 20px;
+    width: auto;
+}
+h1{
+    color: crimson;
+}
+#section3{
+    text-align: center;
+    color: turquoise;
+    font-size: 20px;
+    background-color:maroon;
+}
+.class_name{
+    color:rgb(42, 165, 93);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    background-color: white; /* so that it dones't merge with the parent bg color*/
+    font-size: 20px;
+}
+
+/*****************************************BOX STUFF*********************************************************/
+
+/*NOTE: 
+    box-sizing property is not inherited by children
+    side by side margins add up, but if one on top of the other, the margins merge*/
+
+/********************** margin **************************/
+    /****************** border *********************/    
+        /************** padding ***************/    
+            /********** content **********/    
+#box{
+    background-color: maroon;
+    padding: 30px;
+    /*one size to indicate measure for all sides.     Else top right bottom left */
+    border: 5px solid blue;
+    margin: auto;
+    width:600px;
+    box-sizing: content-box;
+    /*content-box for specifying width to be the width of content-box 
+       GENRALLY PREFERRED OPTION : border-box for specifying width of the entire box (doesn't include margins)*/
+    overflow:auto;
+    /*in case the content exceeds the fixed size of the box
+        auto: adds a scrollbar
+        visible: can be seen outside the box 
+        hidden: will be cut at box borders
+        scroll: adds 2 scrollbars irrespective of whether there is an overflow or not*/
+}
+
+/*Multiple selectors, can be of different types as well*/
+#h1, #ul{
+    text-align:initial;
+    color: purple;
+    font-size: 30px;
+}
+
+
+
+/*****************************************FONT-FAMILY OVER HERE***********************************************/
+#link{
+    font-family: Arial, Helvetica, sans-serif; /*sans-serif is the style without em extra edges in each char*/
+    color:red;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150%; /*equivalent to 24px in most browsers as default is generally 16px*/
+    /* % and 'em' are used for relative sizes, relative to the previously assigned size. 
+       So, had body had text-size as 200%, this would be 300% the default browser size*/
+
+    text-transform: capitalize /*lessago chuuni style (tho u won't find the diff for this example)*/;
+    text-align: center /*already center aligned since it's under #section3 */;
+    background-color: midnightblue;
+}
+/*Combination of selectors : */
+p.class_name{
+    /* For all p with atribute class = class_name*/
+    color: black;
+}
+article > p{
+    /* For all p, which are children of article*/
+    /* .class_name > selector also works*/
+    color : black;
+}
+article p{
+    /* For all p, which are descendents of article*/
+    color : black;
+}
+section article{
+    color : green;
+}
+div > article{
+    color : blue;
+}

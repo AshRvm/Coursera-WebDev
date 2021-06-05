@@ -4,58 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
-    <style>
-        p{
-            color: rgb(42, 165, 93);
-            font-size: 20px;
-            width: auto;
-        }
-        h1{
-            color: crimson;
-        }
-        #section3{
-            text-align: center;
-            color: turquoise;
-            font-size: 20px;
-            background-color:maroon;
-        }
-        .class_name{
-            text-align: center;
-            color: teal;
-            font-size: 20px;
-        }
-
-/*Multiple selectors, can be of different types as well*/
-        #h1, #ul{
-            text-align:initial;
-            color: purple;
-            font-size: 30px;
-        }
-        #link{
-            color:red;
-            background-color: midnightblue;
-        }
-/*Combination of selectors : */
-        p.class_name{
-            /* For all p with atribute class = class_name*/
-            color: black;
-        }
-        article > p{
-            /* For all p, which are children of article*/
-            /* .class_name > selector also works*/
-            color : black;
-        }
-        article p{
-            /* For all p, which are descendents of article*/
-            color : black;
-        }
-        section article{
-            color : green;
-        }
-        div > article{
-            color : blue;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- link to the style sheet ^ -->
 </head>
 <body>
 <h1 id = "top">Yahallo</h1>
@@ -74,37 +24,40 @@
         <li> Go</li>
         <li> Ryouku</li>
     </ol>
-    <p class="class_name">
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-        Tis gonna be some blabberish. Don't mind me
-        <br>
-    </p>
+    <div id="box">
+        <div class="class_name">
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+            Tis gonna be some blabberish. Don't mind me
+            <br>
+        </div>
+    </div>
 </section>
+
 <section id = "section2">
     <h1>Heading for the section2 ig</h1>
     Tis be some character entity references:
@@ -117,10 +70,11 @@
     <div><span>What's gonna happen here ?</span></div>
     <div>Guess I won't know until I try !</div>
 </section>
+
 <section id = "section3">
     Tis a link :
     <br>
-    <a  href = "https://www.youtube.com/watch?v=3UujTImfKIY" target = "anything works here I guess (tho _blank is recommended /shrug)" title = "YoutubeLink">
+    <a  href = "https://www.youtube.com/watch?v=3UujTImfKIY" target = "anything works here I guess (tho _blank is recommended /shrug)" title = "hanafubuki">
         <div id="link">HANAFUBUKI DESU</div>
     </a>
     <img src="hanafubuki.jpg" alt="amazing song" width = "1000" height="600">
@@ -134,6 +88,7 @@
     <br>
     <a href = "#section3">unga bunga</a>
 </section>
+
 <a href = "#top">back to top</a>
 <section>
     <!-- Checking priority order between descendent and child selection combinations-->
@@ -145,5 +100,9 @@
         </article>
     </div>
 </section>
+<section>
+    <!-- internal style declarations -->
+    <div style="color: red; font-size: 150%; text-align: center;"> Internal style declarations</div>
+</section> 
 </body>
 </html>
