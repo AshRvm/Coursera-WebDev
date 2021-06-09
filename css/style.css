@@ -1,8 +1,12 @@
 /* comments in css */
 /* caniuse.com for....well....what the title says */
 
+/* Start with base styles(styles common for every screen size) followed by media queries : @media(condition) {..} 
+    min/max-width:... are inclusive properties, and thus is preferred not to overlap two properties
+    can use "and" or ",(or)" for using multiple conditions */
+
 *{
-    box-sizing: content-box;
+    box-sizing: border-box;
     /*UNIVERSAL SELECTOR : Applies this propery to all elements, not by inheritance*/
 }
 
@@ -19,6 +23,14 @@ h1{
     color: turquoise;
     font-size: 20px;
     background-color:maroon;
+    /* background-image: url("--");
+       background-repeat: no-repeat;
+       background-position: top right;
+       
+       (OR)
+
+       background: url("--") no-repeat top right maroon;
+       */
 }
 .class_name{
     color:rgb(42, 165, 93);
@@ -81,6 +93,7 @@ h1{
     text-align: center /*already center aligned since it's under #section3 */;
     background-color: midnightblue;
 }
+
 /*Combination of selectors : */
 p.class_name{
     /* For all p with atribute class = class_name*/
@@ -101,3 +114,43 @@ section article{
 div > article{
     color : blue;
 }
+
+
+/**************************************** FLOATING ELEMENTS **************************************/
+/* Absolute position will be relative to the closest ancestor in relative postitioning  */
+/* By default only html element is non-static */
+#twoColums{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150%;
+}
+#fbk{
+    width: 33%;
+    border: 1px solid white;
+    padding: 5px;
+    float: left;
+    background-color:rgb(40, 206, 228);
+    text-align: center;
+    color:white;
+}
+#ayame{
+    width: 33%;
+    border: 1px solid white;
+    padding: 5px;
+    float: left;
+    background-color: red;
+    text-align: center;
+    color:white;
+}
+#mio{
+    width: 33%;
+    border: 1px solid white;
+    padding: 5px;
+    float: left;
+    background-color: black;
+    text-align: center;
+    color:red;
+}
+
